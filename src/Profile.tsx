@@ -36,7 +36,7 @@ const Profile = ({ onUpdateProfile }) => {
 
         <section className="col mx-auto">
           <h5>Picture</h5>
-          <img src={profile.picture} className="img-fluid" style={{ width: '200px', height: '200px', objectFit: 'cover' }} />
+          <img src={profile.picture} className="img-fluid" style={{ width: '200px', height: '200px', objectFit: 'contain' }} />
           <label onClick={handleSubmit} className="btn btn-primary mt-3">Update Picture<input type="file" accept="image/*" onChange={handlePictureChange} style={{ display: 'none' }}/></label>
         </section>
         
