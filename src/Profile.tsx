@@ -11,6 +11,14 @@ const Profile = ({ onUpdateProfile }) => {
     picture: ''
   });
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setProfile(prevProfile => ({
+      ...prevProfile,
+      [name]: value
+    }));
+  };
+
   const handlePictureChange = (e) => {
     const file = e.target.files?.[0];
     if (file) {
@@ -26,6 +34,12 @@ const Profile = ({ onUpdateProfile }) => {
   };
 
   const handleSubmit = () => {
+    // Here you define the onUpdateProfile function
+    const onUpdateProfile = (updatedProfile) => {
+      console.log("Updating profile:", updatedProfile);
+      // Here you can handle the profile update logic
+    };
+
     onUpdateProfile(profile);
   };
 
@@ -37,16 +51,16 @@ const Profile = ({ onUpdateProfile }) => {
         <section className="col mx-auto">
           <h5>Picture</h5>
           <img src={profile.picture} className="img-fluid" style={{ width: '200px', height: '200px', objectFit: 'contain' }} />
-          <label onClick={handleSubmit} className="btn btn-primary mt-3">Update Picture<input type="file" accept="image/*" onChange={handlePictureChange} style={{ display: 'none' }}/></label>
+          <label className="btn btn-primary mt-3">Upload Picture<input type="file" accept="image/*" onChange={handlePictureChange} style={{ display: 'none' }}/></label>
         </section>
         
         <section className="col mx-auto">
           <h5>Details</h5>
-          <input type="text" name="name" className="form-control mb-3" placeholder="Name" />
-          <input type="text" name="lastName" className="form-control mb-3" placeholder="Last Name" />
-          <input type="text" name="phoneNumber" className="form-control mb-3" placeholder="Phone Number" />
-          <input type="email" name="email" className="form-control mb-3" placeholder="Email" />
-          <button className="btn btn-primary">Update Info</button>
+          <input type="text" name="name" value={profile.name} onChange={handleChange} className="form-control mb-3" placeholder="Name" />
+          <input type="text" name="lastName" value={profile.lastName} onChange={handleChange} className="form-control mb-3" placeholder="Last Name" />
+          <input type="text" name="phoneNumber" value={profile.phoneNumber} onChange={handleChange} className="form-control mb-3" placeholder="Phone Number" />
+          <input type="email" name="email" value={profile.email} onChange={handleChange} className="form-control mb-3" placeholder="Email" />
+          <button onClick={handleSubmit} className="btn btn-primary">Update Info</button>
         </section>
 
       </section>
