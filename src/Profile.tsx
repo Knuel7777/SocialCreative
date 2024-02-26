@@ -34,10 +34,10 @@ const Profile = ({ onUpdateProfile }) => {
   };
 
   const handleSubmit = () => {
-    // Here you define the onUpdateProfile function
+
     const onUpdateProfile = (updatedProfile) => {
       console.log("Updating profile:", updatedProfile);
-      // Here you can handle the profile update logic
+      
     };
 
     onUpdateProfile(profile);
