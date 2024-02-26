@@ -34,12 +34,9 @@ const Profile = ({ onUpdateProfile }) => {
   };
 
   const handleSubmit = () => {
-
     const onUpdateProfile = (updatedProfile) => {
       console.log("Updating profile:", updatedProfile);
-      
     };
-
     onUpdateProfile(profile);
   };
 
