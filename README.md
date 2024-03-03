@@ -16,7 +16,7 @@ El objetivo principal de este proyecto es construir una interfaz de usuario inte
 
 ## Tecnologías Utilizadas
 
-- **React:** Un framework de TypeScript para construir interfaces de usuario.
+- **React:** Un framework de JavaScript para construir interfaces de usuario.
 - **TypeScript:** Un superconjunto tipado de JavaScript que compila a JavaScript puro.
 - **npm:** Gestor de paquetes para JavaScript.
 - **Bootstrap:** Un framework de CSS para el desarrollo web frontend.
