@@ -1,30 +1,22 @@
-# React + TypeScript + Vite
+# Proyecto Frontend con React y TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es un frontend desarrollado con React y TypeScript. Se centra en la creación de una aplicación web con diferentes vistas y componentes para proporcionar funcionalidades como inicio de sesión, un foro y perfiles de usuario.
 
-Currently, two official plugins are available:
+## Objetivo del Proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+El objetivo principal de este proyecto es construir una interfaz de usuario interactiva y atractiva utilizando React y TypeScript. Se busca proporcionar una experiencia fluida para los usuarios al interactuar con las diversas funciones ofrecidas por la aplicación.
 
-## Expanding the ESLint configuration
+## Características Principales
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Inicio de Sesión:** La aplicación incluye una vista de inicio de sesión donde los usuarios pueden ingresar sus credenciales para acceder a la plataforma.
+  
+- **Foro:** Ofrece una página de foro donde los usuarios pueden publicar y ver mensajes, fomentando la interacción y el intercambio de ideas entre la comunidad.
+  
+- **Perfiles de Usuario:** Proporciona una página de perfil donde los usuarios pueden ver y editar su información personal, así como gestionar su cuenta.
 
-- Configure the top-level `parserOptions` property like this:
+## Tecnologías Utilizadas
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- **React:** Un framework de TypeScript para construir interfaces de usuario.
+- **TypeScript:** Un superconjunto tipado de JavaScript que compila a JavaScript puro.
+- **npm:** Gestor de paquetes para JavaScript.
+- **Bootstrap:** Un framework de CSS para el desarrollo web frontend.
