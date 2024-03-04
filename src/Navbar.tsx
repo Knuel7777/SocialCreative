@@ -5,7 +5,7 @@ function Navbar() {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light p-0">
-        <section className="collapse navbar-collapse" id="navbarSupportedContent">
+        <section className="collapse navbar-collapse">
           <ul className="navbar-nav ms-auto">
 
           <li className="nav-item">
