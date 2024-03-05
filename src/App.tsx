@@ -1,22 +1,21 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Routes, Route, Link, Redirect } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from './Navbar';
 import Profile from './Profile';
-import LogIn from './components/Login/LogIn';
+import Forum from './Forum';
 
 function App() {
 
   return (
     <>
       <BrowserRouter>
-        <Navbar/>
+        <Navbar />
         <Routes>
-          <Route path='/Profile' element={<Profile />} />
-          <Route path='/Login' element={<LogIn />} />
+          <Route path="/forum" element={<Forum />} />
         </Routes>
       </BrowserRouter>
-      </>
-    
+    </>
+
   )
 }
 
