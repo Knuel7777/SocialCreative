@@ -1,4 +1,3 @@
-import './login.css'
 import Validator from './Validator'
 
 const LogIn = () => {
