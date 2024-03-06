@@ -2,8 +2,6 @@ import { useState } from 'react';
 import CommentForm from './CommentForm';
 import { Card, Container, Row, Col } from 'react-bootstrap'
 
-
-
 const Forum = () => {
   const [posts, setPosts] = useState([
     { id: 1, title: 'Post 1', content: 'Tarea 1', comments: ["Gracias Profe"] },
@@ -26,18 +24,17 @@ const Forum = () => {
 
   return (
     <>
-    <Container>
+    <Container className="my-4">
         <Row className="justify-content-md-center">
           <Col md="8">
-            <h1 className="text-center">Foro</h1>
             {posts.map(post => (
-              <Card className="mb-3" key={post.id}>
+              <Card className="bg-dark text-white mb-3 mt-5" key={post.id} style={{ borderRadius: '25px' }}>
                 <Card.Body>
-                  <Card.Title>{post.title}</Card.Title>
-                  <Card.Text>
+                  <Card.Title className="fw-bold text-uppercase">{post.title}</Card.Title>
+                  <Card.Text className="text-start">
                     <p>{post.content}</p>
-                    <h3>Comentarios:</h3>
-                    <ul>
+                    <h3 className="fw-bold mt-4">Comentarios:</h3>
+                    <ul className="list-unstyled">
                       {post.comments.map((comment, index) => (
                         <li key={index}>{comment}</li>
                       ))}
@@ -53,6 +50,5 @@ const Forum = () => {
     </>
   );
 };
-
 
 export default Forum;
