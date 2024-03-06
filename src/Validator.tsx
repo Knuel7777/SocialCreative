@@ -43,19 +43,19 @@ function Validator() {
     
   return (
     <>
-    <div className="form-outline form-white mb-4">
+    <section className="form-outline form-white mb-4">
         <input type="email" id="Email" className="form-control form-control-lg" value={email} onChange={handleEmail} />
         <label className="form-label" htmlFor="typeEmailX" >Email</label>
 
-    </div>
-    <div className="form-outline form-white mb-4">
+    </section>
+    <section className="form-outline form-white mb-4">
         <input type="password" id="Pass" className="form-control form-control-lg" value={password} onChange={handlePass}/>
         <label className="form-label" htmlFor="typePasswordX">Password</label>
         
-    </div>
-    <div className="form-outline form-white mb-4">
+    </section>
+    <section className="form-outline form-white mb-4">
     {validationMessage && <span>{validationMessage}</span>}
-    </div>
+    </section>
     
     <button className="btn btn-outline-light btn-lg px-5" type="submit" onClick={handleClick} >Login</button>
     </>
