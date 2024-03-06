@@ -16,7 +16,8 @@ function App() {
         <Routes>
           <Route path='/Profile' element={<Profile />} />
           <Route path='/Login' element={<LogIn />} />
-		      <Route path="/forum" element={<Forum />} />
+	  <Route path="/forum" element={<Forum />} />
+          <Route path="*" element={<LogIn />} />
         </Routes>
       </BrowserRouter>
       </>
@@ -25,3 +26,4 @@ function App() {
 }
 
 export default App
+
