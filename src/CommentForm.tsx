@@ -12,7 +12,7 @@ const CommentForm = ({ postId, onAddComment }) => {
     };
   
     return (
-      <div>
+      <section>
         <input
           type="text"
           value={comment}
@@ -20,7 +20,7 @@ const CommentForm = ({ postId, onAddComment }) => {
           placeholder="Añade un comentario"
         />
         <button onClick={handleAddComment}>Agregar Comentario</button>
-      </div>
+      </section>
     );
   };
   
