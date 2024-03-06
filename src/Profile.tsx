@@ -30,28 +30,51 @@ const Profile = ({ onUpdateProfile }) => {
   };
 
   return (
-<section className="container-fluid gradient-custom" style={{ minHeight: '100vh', background: 'linear-gradient(45deg, #orange, #darkorange)' }} >
-  <section className="row text-center">
-    <h3 className='mb-3 text-white'>Account Details</h3>
+    <section className="vh-100 gradient-custom">
+      <section className="container h-100">
+        <section className="row d-flex justify-content-center align-items-center h-100">
+          <section className="col-12 col-md-6 col-lg-4">
+            <section className="card bg-dark text-white" style={{ borderRadius: '25px' }}>
+              <section className="card-body p-5">
 
-    <section className="col-md-3 mx-auto text-center">
-      <input type="text" name="name" value={profile.name} onChange={handleChange} className="form-control form-control-lg mb-3 form-outline form-white" placeholder="Name" />
-      <input type="text" name="lastName" value={profile.lastName} onChange={handleChange} className="form-control form-control-lg mb-3 form-outline form-white" placeholder="Last Name" />
-      <input type="text" name="phoneNumber" value={profile.phoneNumber} onChange={handleChange} className="form-control form-control-lg mb-3 form-outline form-white" placeholder="Phone Number" />
-      <input type="email" name="email" value={profile.email} onChange={handleChange} className="form-control form-control-lg mb-3 form-outline form-white" placeholder="Email" />
-      <label className="btn btn-outline-light btn-lg mt-3">Upload Picture<input type="file" accept="image/*" onChange={handleChange} style={{ display: 'none' }} /></label>
+                <h3 className='fw-bold mb-5 text-uppercase'>Account Details</h3>
+
+                <section className="form-outline form-white mb-4">
+                  <input type="text" name="name" value={profile.name} onChange={handleChange} className="form-control form-control-lg" placeholder="Name" />
+                </section>
+                <section className="form-outline form-white mb-4">
+                  <input type="text" name="lastName" value={profile.lastName} onChange={handleChange} className="form-control form-control-lg" placeholder="Last Name" />
+                </section>
+                <section className="form-outline form-white mb-4">
+                  <input type="email" name="email" value={profile.email} onChange={handleChange} className="form-control form-control-lg" placeholder="Email" />
+                </section>
+                <section className="form-outline form-white mb-4">
+                  <input type="text" name="phoneNumber" value={profile.phoneNumber} onChange={handleChange} className="form-control form-control-lg" placeholder="Phone Number" />
+                </section>
+
+                <section className="d-flex justify-content-center">
+                  <label className="btn btn-outline-light btn-lg px-5" style={{ borderRadius: '25px' }}>
+                    Upload Picture<input type="file" accept="image/*" name="picture" onChange={handleChange} style={{ display: 'none' }} />
+                  </label>
+                </section>
+              </section>
+            </section>
+          </section>
+          
+          <section className="col-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center text-center">
+            <section>
+              {profile.picture && (
+                <img src={profile.picture} alt="Profile" className="img-thumbnail mb-4" style={{ width: '200px', height: '200px', borderRadius: '50%' }} />
+              )}
+              <h4 className='text-black'>{profile.name} {profile.lastName}</h4>
+              <p className='text-black'>{profile.email}</p>
+              <p className='text-black'>{profile.phoneNumber}</p>
+            </section>
+          </section>
+
+        </section>
+      </section>
     </section>
-
-    <section className="col-md-4 mx-auto text-center">
-      <img src={profile.picture} className="img-fluid mb-0" alt="Profile" style={{ width: '200px', height: '200px', objectFit: 'contain'}} />
-      <p className='text-white mb-0'>{profile.name} {profile.lastName}</p>
-      <p className='text-white mb-0'>{profile.email}</p>
-      <p className='text-white'>{profile.phoneNumber}</p>
-    </section>
-    
-  </section>
-</section>
-
   );
 }
 
