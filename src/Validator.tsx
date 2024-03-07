@@ -18,7 +18,6 @@ function Validator() {
     const ValidPass = (password: string) => {
         return password.trim() !== '';
       };
-
     
     const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
         setEmail(e.target.value);
@@ -26,7 +25,6 @@ function Validator() {
     const handlePass = (e: React.ChangeEvent<HTMLInputElement>) => {
         setPass(e.target.value);
       };
-
 
       {/* evento Onclick para el boton Login */}
       const handleClick = () => {
