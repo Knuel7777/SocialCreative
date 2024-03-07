@@ -28,7 +28,7 @@ const Forum = () => {
         <Row className="justify-content-md-center">
           <Col md="8">
             {posts.map(post => (
-              <Card className="bg-dark text-white mb-3 mt-5" key={post.id} style={{ borderRadius: '25px' }}>
+              <Card className="bg-dark text-white mb-3 mt-5" key={post.id} style={{ borderRadius: '2.31vh' }}>
                 <Card.Body>
                   <Card.Title className="fw-bold text-uppercase">{post.title}</Card.Title>
                   <Card.Text className="text-start">
