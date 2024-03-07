@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import LogIn from './LogIn';
 import Forum from './Forum';
 import Profile from './Profile';
+import NoPage from "./NoPage";
 
 function App() {
 
@@ -14,10 +15,11 @@ function App() {
       <BrowserRouter>
         <Navbar/>
         <Routes>
+          <Route path='/' element={<LogIn />} />
+          <Route path='/LogIn' element={<LogIn />} />
           <Route path='/Profile' element={<Profile />} />
-          <Route path='/Login' element={<LogIn />} />
-	  <Route path="/forum" element={<Forum />} />
-          <Route path="*" element={<LogIn />} />
+	        <Route path="/Forum" element={<Forum />} />
+          <Route path="*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>
       </>
@@ -26,4 +28,5 @@ function App() {
 }
 
 export default App
+
 
