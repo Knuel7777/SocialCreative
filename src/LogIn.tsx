@@ -2,7 +2,7 @@ import Validator from './Validator'
 
 const LogIn = () => {
     return ( 
-        <> <section className="vh-100 gradient-custom">
+        <> <section className="vh-100">
         <section className="container h-100">
             <section className="row d-flex justify-content-center align-items-center h-100">
             <section className="col-12 col-md-8 col-lg-6 col-xl-5">
