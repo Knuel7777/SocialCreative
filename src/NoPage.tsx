@@ -14,7 +14,7 @@ function NoPage() {
                 <section className="mb-md-5 mt-md-4 pb-5">
                   <h1 className="fw-bold mb-2 text-uppercase">404 - Page Not Found</h1>
                   <p className="text-white-50 mb-5">Sorry, the page you are looking for could not be found.</p>
-                  <Link className="btn btn-outline-light btn-lg px-5" to="/Home">Homepage</Link>
+                  <Link className="btn btn-outline-light btn-lg px-5" to="/LogIn">Sign-In</Link>
                 </section>
               </section>
             </section>
