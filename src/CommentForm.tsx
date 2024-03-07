@@ -12,20 +12,20 @@ const CommentForm = ({ postId, onAddComment }) => {
   
     return (
 <section className="mb-3 d-grid gap-2">
-  <div className="input-group">
+  <section className="input-group">
     <input
       type="text"
       value={comment}
       onChange={e => setComment(e.target.value)}
       className="form-control form-control-lg"
       placeholder="Añade un comentario"
-      style={{ borderRadius: '25px 0 0 25px' }}
+      style={{ borderRadius: '2.31vh 0 0 2.31vh' }}
     />
     <button onClick={handleAddComment}
       className="btn btn-outline-light btn-lg"
       type="button"
-      style={{ borderRadius: '0 25px 25px 0' }}>Agregar Comentario</button> 
-  </div>
+      style={{ borderRadius: '0 2.31vh 2.31vh 0' }}>Agregar Comentario</button> 
+  </section>
 </section>
 
     );
