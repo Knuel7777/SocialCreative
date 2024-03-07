@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Validator() {
+    const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPass] = useState('');
     const [emailValid, setEmailValid] = useState(false);
@@ -38,6 +40,7 @@ function Validator() {
           setValidationMessage('Email o contraseña inválida');
         } else {
           setValidationMessage('Redireccionando...');
+          navigate('/Forum');
         }
       };
     
